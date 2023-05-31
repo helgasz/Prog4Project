@@ -27,7 +27,7 @@
     text-align: center;
 }
 .positionNote{
-
+    text-align:center;
 }
 .positionNote a {
         font-size: 17px;
@@ -40,20 +40,28 @@ table {
 }
 
 table, th, td {
-    border: 1px dashed black;
+    border: 3px groove #635c81;
 }
 
 table {
     border-collapse: collapse;
 }
 
-th, td {
-    padding: 5px;
+td {
     text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 1px, 1px 1px 1px black;
+    font-size: 14px;
+    font-family: 'Playfair Display';
 }
 
 th {
-    background-color: lavender;
+    background-color: #26213e;
+    text-transform: uppercase;
+    font-family: 'Playfair Display';
+    text-shadow: 0px 0px 1px, 1px 1px 1px black;
+    color: #a3c3e3;
+    padding: 4px;
 }
 
 #updateformdiv {
@@ -62,13 +70,16 @@ th {
     margin-bottom: 20px;
 }
 
-    #updateformdiv label, button, input {
-        margin: 10px;
-        padding: 4px;
-    }
+
 
     #updateformdiv label {
-        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Playfair Display';
+        text-shadow: 0px 0px 1px, 1px 1px 1px black;
+        color: #c1b7ed;
+        font-size: 13px;
+        margin-top: 2px;
     }
 
 #formdiv {
@@ -77,28 +88,48 @@ th {
     margin-bottom: 20px;
 }
 
-    #formdiv label, button, input {
-        margin: 10px;
-        padding: 4px;
-    }
+button {
+    margin: 2px;
+    padding: 3px;
+    background-color: #0d0814;
+    border-radius: 120px;
+    border: 2px solid #1f1b2c;
+    color: #9797e5;
+    text-transform: uppercase;
+    font-family: 'Playfair Display';
+    text-shadow: 0px 0px 1px, 1px 1px 1px black;
+    font-size: 14px;
+}
 
 #formdiv label {
         text-align: center;
         text-transform: uppercase;
         font-family: 'Playfair Display';
         text-shadow: 0px 0px 1px, 1px 1px 1px black;
-        color: #af9dff;
-        font-size: 14px;
-        letter-spacing: 2px;
+        color: #c1b7ed;
+        font-size: 13px;
+        margin-top: 2px;
     }
 
 table button {
-    padding: 2px;
+    padding: 1px;
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 a {
     text-decoration-style: wavy;
     font-size: 21px;
     font-style: italic;
+}
+input {
+    background-color: #26213e;
+    border: 2px solid #473f6a;
+    border-right: 2px solid #2c264a;
+    border-radius: 120px;
+    margin: 0px;
+    border-bottom: 2px solid #363344;
+    padding: 2px;
+    color: #aaa1cf;
 }
