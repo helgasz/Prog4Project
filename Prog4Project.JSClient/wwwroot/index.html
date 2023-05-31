@@ -9,8 +9,13 @@
 </head>
 <body>
     <h1>Worker Catalog</h1>
+    <div>
+        <label>Worker Name</label>
+        <input type="text" id="workername" />
+        <button type="button" onclick="create()">Add Worker</button>
+    </div>
     <table>
-        <thead><tr><th>ID</th><th>Name</th></tr></thead>
+        <thead><tr><th width="10%;">ID</th><th width="80%;">Name</th><th width="10%;">Actions</th></tr></thead>
         <tbody id="resultarea"></tbody>
     </table>
     <script src="script.js"></script>

@@ -16,3 +16,19 @@ th, td {
 th {
     background-color:lavender;
 }
+#formdiv{
+    display:flex;
+    flex-direction:column;
+    margin-bottom: 20px;
+}
+#formdiv label, button, input{
+    margin:10px;
+    padding:4px;
+}
+#formdiv label{
+    font-weight:bold;
+}
+table button {
+    padding:2px;
+    text-align:center;
+}
