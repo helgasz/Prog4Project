@@ -1,8 +1,8 @@
-﻿let workers = [];
+﻿let managers = [];
 let connection = null;
 getdata();
 setupSignalR();
-let workerIdToUpdate = -1;
+let managerIdtoUpdate = -1;
 
 function setupSignalR() {
     connection = new signalR.HubConnectionBuilder()
@@ -10,15 +10,15 @@ function setupSignalR() {
         .configureLogging(signalR.LogLevel.Information)
         .build();
 
-    connection.on("WorkerCreated", (user, message) => {
+    connection.on("ManagerCreated", (user, message) => {
         getdata();
     });
 
-    connection.on("WorkerDeleted", (user, message) => {
+    connection.on("ManagerDeleted", (user, message) => {
         getdata();
     });
 
-    connection.on("WorkerUpdated", (user, message) => {
+    connection.on("ManagerUpdated", (user, message) => {
         getdata();
     });
 
@@ -42,28 +42,28 @@ async function start() {
 
 function display() {
     document.getElementById('resultarea').innerHTML = "";
-    workers.forEach(t => {
+    managers.forEach(t => {
         document.getElementById('resultarea').innerHTML +=
-            "<tr><td>" + t.workerId + "</td><td>"
-        + t.workerName + "</td><td>" +
-        `<button type="button" onclick="remove(${t.workerId})">Delete</button>` +
-        `<button type="button" onclick="showupdate(${t.workerId})">Update</button>`
+            "<tr><td>" + t.managerId + "</td><td>"
+            + t.managerName + "</td><td>" +
+            `<button type="button" onclick="remove(${t.managerId})">Delete</button>` +
+            `<button type="button" onclick="showupdate(${t.managerId})">Update</button>`
             + "</td></tr>";
     });
 }
 
 async function getdata() {
-    await fetch('http://localhost:20741/worker')
+    await fetch('http://localhost:20741/manager')
         .then(x => x.json())
         .then(y => {
-            workers = y;
-            //console.log(workers);
+            managers = y;
+            
             display();
         });
 }
 
 function remove(id) {
-    fetch('http://localhost:20741/worker/' + id, {
+    fetch('http://localhost:20741/manager/' + id, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json', },
         body: null
@@ -77,21 +77,20 @@ function remove(id) {
 
 }
 
-function showupdate(id)
-{   
-    document.getElementById('workernametoupdate').value = workers.find(t => t['workerId'] == id)['workerName'];
+function showupdate(id) {
+    document.getElementById('managernametoupdate').value = managers.find(t => t['managerId'] == id)['managerName'];
     document.getElementById('updateformdiv').style.display = 'flex';
-    workerIdToUpdate = id;
+    managerIdtoUpdate = id;
 }
 
 function update() {
     document.getElementById('updateformdiv').style.display = 'none';
-    let name = document.getElementById('workernametoupdate').value;
-    fetch('http://localhost:20741/worker/', {
+    let name = document.getElementById('managernametoupdate').value;
+    fetch('http://localhost:20741/manager/', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json', },
         body: JSON.stringify(
-            { workerName: name, workerId: workerIdToUpdate })
+            { managerName: name, managerId: managerIdtoUpdate })
     })
         .then(response => response)
         .then(data => {
@@ -103,12 +102,12 @@ function update() {
 }
 
 function create() {
-    let name = document.getElementById('workername').value;
-    fetch('http://localhost:20741/worker', {
+    let name = document.getElementById('managername').value;
+    fetch('http://localhost:20741/manager', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', },
         body: JSON.stringify(
-            { workername: name })
+            { managerName: name })
     })
         .then(response => response)
         .then(data => {
@@ -116,5 +115,5 @@ function create() {
             getdata();
         })
         .catch((error) => { console.error('Error:', error); });
-    
+
 }

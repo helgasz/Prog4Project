@@ -16,7 +16,22 @@ th, td {
 th {
     background-color:lavender;
 }
-#formdiv{
+#updateformdiv {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+    #updateformdiv label, button, input {
+        margin: 10px;
+        padding: 4px;
+    }
+
+    #updateformdiv label {
+        font-weight: bold;
+    }
+
+ #formdiv{
     display:flex;
     flex-direction:column;
     margin-bottom: 20px;
@@ -31,4 +46,9 @@ th {
 table button {
     padding:2px;
     text-align:center;
+}
+a {
+    text-decoration-style: wavy;
+    font-size: 21px;
+    font-style: italic;
 }
