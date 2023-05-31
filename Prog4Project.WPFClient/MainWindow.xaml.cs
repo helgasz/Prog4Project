@@ -27,7 +27,9 @@ namespace Prog4Project.WPFClient
 
         private void ManagerEditor(object sender, RoutedEventArgs e)
         {
-            ManagerWindow m = new ManagerWindow();
+            //tesztelek tesztike = new tesztelek();
+            //tesztike.Show();
+            ManagerEditorWindow m = new ManagerEditorWindow();
             m.Show();
         }
 
@@ -39,7 +41,7 @@ namespace Prog4Project.WPFClient
 
         private void PositionEditor(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void ProjectEditor(object sender, RoutedEventArgs e)

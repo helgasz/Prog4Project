@@ -43,7 +43,7 @@ namespace Prog4Project.Endpoint.Controllers
         }
 
         // PUT api/<PositionController>/5
-        [HttpPut("{id}")]
+        [HttpPut]
         public void Update([FromBody] Position value)
         {
             this.logic.Update(value);

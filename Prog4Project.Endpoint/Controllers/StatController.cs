@@ -20,7 +20,7 @@ namespace Prog4Project.Endpoint.Controllers
         }
 
         // GET: api/<StatController>
-        [HttpGet("{year}")]
+        [HttpGet]
         public double? Average(int year)
         {
             return this.logic.GetAvarageDifficulityPerYear(year);

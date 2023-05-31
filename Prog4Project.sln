@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prog4Project.Client", "Prog
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prog4Project.Models", "Prog4Project.Models\Prog4Project.Models.csproj", "{16E4A5A3-BAF1-4690-A551-072FCD7128CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prog4Project.Repository", "Prog4Project.Repository\Prog4Project.Repository.csproj", "{106BAD61-3DF3-4841-996A-413417EB2F2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prog4Project.Repository", "Prog4Project.Repository\Prog4Project.Repository.csproj", "{106BAD61-3DF3-4841-996A-413417EB2F2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prog4Project.Logic", "Prog4Project.Logic\Prog4Project.Logic.csproj", "{39089906-2936-45DB-806D-ED8151FB1CBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prog4Project.Logic", "Prog4Project.Logic\Prog4Project.Logic.csproj", "{39089906-2936-45DB-806D-ED8151FB1CBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prog4Project.Endpoint", "Prog4Project.Endpoint\Prog4Project.Endpoint.csproj", "{0918F620-4079-4364-B309-C0C3676612C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prog4Project.Endpoint", "Prog4Project.Endpoint\Prog4Project.Endpoint.csproj", "{0918F620-4079-4364-B309-C0C3676612C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prog4Project.WPFClient", "Prog4Project.WPFClient\Prog4Project.WPFClient.csproj", "{0B879B3E-E510-4C20-AAB1-8A146A6EA216}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prog4Project.WPFClient", "Prog4Project.WPFClient\Prog4Project.WPFClient.csproj", "{0B879B3E-E510-4C20-AAB1-8A146A6EA216}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prog4Project.JSClient", "Prog4Project.JSClient\Prog4Project.JSClient.csproj", "{A3292100-B068-48AE-8CB1-36B5C815F0FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{0B879B3E-E510-4C20-AAB1-8A146A6EA216}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B879B3E-E510-4C20-AAB1-8A146A6EA216}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B879B3E-E510-4C20-AAB1-8A146A6EA216}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3292100-B068-48AE-8CB1-36B5C815F0FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3292100-B068-48AE-8CB1-36B5C815F0FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3292100-B068-48AE-8CB1-36B5C815F0FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3292100-B068-48AE-8CB1-36B5C815F0FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

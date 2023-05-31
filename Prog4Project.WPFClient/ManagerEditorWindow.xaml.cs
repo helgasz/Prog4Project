@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Prog4Project.WPFClient
 {
     /// <summary>
-    /// Interaction logic for ManagerWindow.xaml
+    /// Interaction logic for ManagerEditorWindow.xaml
     /// </summary>
-    public partial class ManagerWindow : Window
+    public partial class ManagerEditorWindow : Window
     {
-        public ManagerWindow()
+        public ManagerEditorWindow()
         {
             InitializeComponent();
         }

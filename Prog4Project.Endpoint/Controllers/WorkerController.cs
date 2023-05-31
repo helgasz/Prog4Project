@@ -44,8 +44,8 @@ namespace Prog4Project.Endpoint.Controllers
         }
 
         // PUT api/<WorkerController>/5
-        [HttpPut("{id}")]
-        public void Update([FromBody] Worker value)
+        [HttpPut]
+        public void Put([FromBody] Worker value)
         {
             this.logic.Update(value);
         }

@@ -1,0 +1,18 @@
+﻿table {
+    width: 100%;
+}
+
+table, th, td{
+    border:1px dashed black;
+
+}
+table { 
+    border-collapse: collapse;
+
+}
+th, td {
+    padding:5px;
+}
+th {
+    background-color:lavender;
+}

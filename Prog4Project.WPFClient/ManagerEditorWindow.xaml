@@ -1,4 +1,4 @@
-﻿<Window x:Class="Prog4Project.WPFClient.ManagerWindow"
+﻿<Window x:Class="Prog4Project.WPFClient.ManagerEditorWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -17,12 +17,12 @@
         <ListBox ItemsSource="{Binding managers}" SelectedItem="{Binding SelectedManager}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Label Content="{Binding ManagerName}" />
+                    <Label Content="{Binding ManagerName}"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel Grid.Column="1">
-            <Label Content="Name" Background="PaleVioletRed" Padding="5"/>
+            <Label Content="Name" Background="Lavender" Padding="5"/>
             <TextBox Text="{Binding SelectedManager.ManagerName}" Padding="10" Margin="0,0,0,10"/>
             <Button Content="Create Manager" Command="{Binding CreateManagerCommand}" Margin="3" Padding="5"/>
             <Button Content="Delete Manager" Command="{Binding DeleteManagerCommand}" Margin="3" Padding="5"/>

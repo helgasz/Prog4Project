@@ -9,8 +9,9 @@
 
     <Grid>
         <StackPanel>
-            <Button Click="ManagerEditor" Padding="3" Margin="5, 150, 5, 5" FontSize="14">Manager</Button>
+            
             <Button Click="WorkerEditor" Padding="3" Margin="5" FontSize="14">Worker</Button>
+            <Button Click="ManagerEditor" Padding="3" Margin="5" FontSize="14">Manager</Button>
             <Button Click="PositionEditor" Padding="3" Margin="5" FontSize="14">Position</Button>
             <Button Click="ProjectEditor" Padding="3" Margin="5" FontSize="14">Project</Button>
         </StackPanel>

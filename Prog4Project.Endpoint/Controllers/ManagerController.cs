@@ -43,7 +43,7 @@ namespace Prog4Project.Endpoint.Controllers
         }
 
         // PUT api/<ManagerController>/5
-        [HttpPut("{id}")]
+        [HttpPut]
         public void Update([FromBody] ProjectManager value)
         {
             this.logic.Update(value);
