@@ -1,0 +1,104 @@
+﻿body {
+    background-color: #141026;
+    color: #aaa1cf;
+}
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/playfairdisplay/v21/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Playfair Display Italic';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/playfairdisplay/v22/nuFRD-vYSZviVYUb_rj3ij__anPXDTnCjmHKM4nYO7KN_qiTXtHA-Q.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.positionTitle {
+    font-family: Playfair Display;
+    text-transform: uppercase;
+    font-size: 30px;
+    text-shadow: 0px 0px 1px, 1px 1px 1px black;
+    text-align: center;
+}
+.positionNote{
+
+}
+.positionNote a {
+        font-size: 17px;
+        font-family: Playfair Display Italic;
+        color: #a3c3e3;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px dashed black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+
+th {
+    background-color: lavender;
+}
+
+#updateformdiv {
+    display: none;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+    #updateformdiv label, button, input {
+        margin: 10px;
+        padding: 4px;
+    }
+
+    #updateformdiv label {
+        font-weight: bold;
+    }
+
+#formdiv {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+    #formdiv label, button, input {
+        margin: 10px;
+        padding: 4px;
+    }
+
+#formdiv label {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Playfair Display';
+        text-shadow: 0px 0px 1px, 1px 1px 1px black;
+        color: #af9dff;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+table button {
+    padding: 2px;
+    text-align: center;
+}
+
+a {
+    text-decoration-style: wavy;
+    font-size: 21px;
+    font-style: italic;
+}

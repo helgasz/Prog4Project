@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Position UI</title>
+    <link rel="stylesheet" href="Positionstyle.css" />
+</head>
+<body>
+    <div class="positionTitle">Position Editor</div>
+    <div class="positionNote"><a href="index.html">Back to the front page</a></div>
+    <div id="formdiv">
+        <label>Project ID</label>
+        <input type="text" id="projectIDnew" />
+        <label>Worker ID</label>
+        <input type="text" id="workerIDnew" />
+        <label>Priority</label>
+        <input type="text" id="priorityNew" />
+        <label>Position Name</label>
+        <input type="text" id="positionNew" />
+        
+        <button type="button" onclick="create()">Add Position</button>
+    </div>
+    <div id="updateformdiv">
+        <label>Position Name</label>
+        <input type="text" id="positionnametoupdate" />
+        <button type="button" onclick="update()">Update Position</button>
+    </div>
+
+    <table>
+        <thead><tr>
+            <th width="10%;">Position ID</th>
+            <th width="10%;">Project ID</th>
+            <th width="10%;">Worker ID</th>
+            <th width="10%;">Priority</th>
+            <th width="50%;">Position Name</th>
+            <th width="10%;">Actions</th>
+            </tr></thead>
+        <tbody id="resultarea"></tbody>
+    </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="positionScript.js"></script>
+</body>
+</html>
