@@ -23,5 +23,6 @@ namespace Prog4Project.WPFClient
         {
             InitializeComponent();
         }
+
     }
 }

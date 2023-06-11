@@ -82,6 +82,8 @@ function remove(id) {
 
 function showupdate(id) {
     document.getElementById('positionnametoupdate').value = positions.find(t => t['positionId'] == id)['positionName'];
+    document.getElementById('workertoupdate').value = positions.find(t => t['positionId'] == id)['workerId'];
+    document.getElementById('prioritytoupdate').value = positions.find(t => t['positionId'] == id)['priority'];
     document.getElementById('updateformdiv').style.display = 'flex';
     positionIdtoUpdate = id;
 }
@@ -89,11 +91,13 @@ function showupdate(id) {
 function update() {
     document.getElementById('updateformdiv').style.display = 'none';
     let name = document.getElementById('positionnametoupdate').value;
+    let worker = document.getElementById('workertoupdate').value;
+    let prio = document.getElementById('prioritytoupdate').value;
     fetch('http://localhost:20741/position/', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json', },
         body: JSON.stringify(
-            { positionName: name, positionId: positionIdtoUpdate })
+            { positionName: name, positionId: positionIdtoUpdate, workerId: worker, priority: prio })
     })
         .then(response => response)
         .then(data => {
