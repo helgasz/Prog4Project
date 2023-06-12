@@ -6,7 +6,28 @@
         xmlns:local="clr-namespace:Prog4Project.WPFClient"
         mc:Ignorable="d"
         Title="PostionEditorWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:PositionEditorWindowModel />
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+
+        </Grid.ColumnDefinitions>
+        <ListBox ItemsSource="{Binding Positions}" SelectedItem="{Binding SelectedPosition}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Label Content="{Binding PositionName}" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        <StackPanel Grid.Column="1">
+            <Label Content="Name" Background="BlanchedAlmond" Padding="5"/>
+            <TextBox Text="{Binding SelectedPosition.PositionName}" Padding="5" Margin="0,0,0,10"/>
+            <Button Content="Create Positon" Command="{Binding CreatePositionCommand}" Margin="5" Padding="3"/>
+            <Button Content="Delete Positon" Command="{Binding DeletePositionCommand}" Margin="5" Padding="3"/>
+            <Button Content="Update Positon" Command="{Binding UpdatePositionCommand}" Margin="5" Padding="3"/>
+        </StackPanel>
     </Grid>
 </Window>

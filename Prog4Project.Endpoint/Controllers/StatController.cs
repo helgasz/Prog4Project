@@ -23,14 +23,14 @@ namespace Prog4Project.Endpoint.Controllers
         [HttpGet]
         public double? Average(int year)
         {
-            return this.logic.GetAvarageDifficulityPerYear(year);
+            return this.logic.GetAvarageDifficulityPerManager(year);
         }
 
         // GET api/<StatController>/5
         [HttpGet]
-        public IEnumerable<ProjectLogic.YearInfo> YearStatistics(int year)
+        public IEnumerable<ProjectLogic.ManagerInfo> YearStatistics(int year)
         {
-            return this.logic.YearStatistics();
+            return this.logic.ManagerStat();
         }
     }
 }

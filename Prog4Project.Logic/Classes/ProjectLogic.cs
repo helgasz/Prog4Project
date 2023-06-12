@@ -49,31 +49,31 @@ namespace Prog4Project.Logic
             this.repo.Update(item);
         }
 
-        public double? GetAvarageDifficulityPerYear(int year)
+        public double? GetAvarageDifficulityPerManager(int mgtID)
         {
             return this.repo
                 .ReadAll()
-                .Where(t => t.Finished.Year == year)
+                .Where(t => t.ManagerId == mgtID)
                 .Average(t => t.Difficulity);
         }
 
-        public IEnumerable<YearInfo> YearStatistics()
+        public IEnumerable<ManagerInfo> ManagerStat()
         {
             return from x in this.repo.ReadAll()
-                   group x by x.Finished.Year into g
-                   select new YearInfo()
+                   group x by x.ManagerId into g
+                   select new ManagerInfo()
                    {
-                       Year = g.Key,
-                       AvgRating = g.Average(t => t.Difficulity),
+                       Manager = g.Key,
+                       AvgDiff = g.Average(t => t.Difficulity),
                        ProjectNum = g.Count()
                    };
 
         }
 
-        public class YearInfo
+        public class ManagerInfo
         {
-            public int Year { get; set; }
-            public double? AvgRating { get; set; }
+            public int Manager { get; set; }
+            public double? AvgDiff { get; set; }
 
             public int ProjectNum { get; set; }
             public int PosNum { get; set; }
