@@ -27,9 +27,13 @@ namespace Prog4Project.WPFClient
 
         private void ManagerEditor(object sender, RoutedEventArgs e)
         {
-            
+
             ManagerEditorWindow m = new ManagerEditorWindow();
             m.Show();
+
+            //_ManagerTry2xaml try2help = new _ManagerTry2xaml();
+            //try2help.Show();
+
         }
 
         private void WorkerEditor(object sender, RoutedEventArgs e)
