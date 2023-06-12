@@ -63,6 +63,7 @@ namespace Prog4Project.WPFClient
 
             if (!IsInDesignMode)
             {
+                //something not right here
                 managers = new RestCollection<ProjectManager>("http://localhost:20741/", "manager");
                 CreateManagerCommand = new RelayCommand(() =>
                 {
