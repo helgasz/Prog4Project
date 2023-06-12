@@ -46,12 +46,12 @@ function display() {
     projects.forEach(t => {
         document.getElementById('resultarea').innerHTML +=
             "<tr><td>" + t.projectId + "</td><td>"
-        + t.projectName + "</td><td>"
-        + t.price + "</td><td>"
-        + t.managerId + "</td><td>"
-        + t.difficulity + "</td><td>"
-        + `<button type="button" onclick="remove(${t.projectId})">Delete</button>` +
-        `<button type="button" onclick="showupdate(${t.projectId})">Update</button>`
+            + t.projectName + "</td><td>"
+            + t.price + "</td><td>"
+            + t.managerId + "</td><td>"
+            + t.difficulity + "</td><td>"
+            + `<button type="button" onclick="remove(${t.projectId})">Delete</button>` +
+            `<button type="button" onclick="showupdate(${t.projectId})">Update</button>`
             + "</td></tr>";
     });
 }
@@ -129,4 +129,41 @@ function create() {
         })
         .catch((error) => { console.error('Error:', error); });
 
+}
+
+function calculateAverageDifficulty(managerId, projects) {
+    
+    const managerProjects = projects.filter(project => parseInt(project.managerId) === parseInt(managerId));
+    console.log("Manager Projects:", managerProjects);
+    console.log("Total Projects:", managerProjects.length);
+
+    if (managerProjects.length === 0) {
+        return 0;
+    }
+
+    const totalDifficulty = managerProjects.reduce((sum, project) => sum + project.difficulity, 0);
+    console.log("Total Difficulty:", totalDifficulty);
+
+    return totalDifficulty / managerProjects.length;
+}
+
+
+
+function countProjectsByManager(managerId, projects) {
+    let projectCount = 0;
+    projects.forEach(project => {        
+        if (parseInt(project.managerId) === parseInt(managerId)) {
+            projectCount++;
+        }
+    });
+
+    return projectCount;
+}
+
+function giveInfo() {
+    const managerId = document.getElementById('ManagerIdInfo').value;
+    const projectCount = countProjectsByManager(managerId, projects);
+
+    document.getElementById('avarageDifMan').textContent = "Average Difficulty for Manager's Projects: " + calculateAverageDifficulty(managerId, projects);
+    document.getElementById('projectNumero').textContent = "Number of Manager's Projects: " + projectCount;
 }
