@@ -63,7 +63,7 @@ namespace Prog4Project.WPFClient
             
             if (!IsInDesignMode)
             {
-                Positions = new RestCollection<Position>("http://localhost:20741/", "postion");
+                Positions = new RestCollection<Position>("http://localhost:20741/", "position");
                 CreatePositionCommand = new RelayCommand(() =>
                 {
                     Positions.Add(new Position()
