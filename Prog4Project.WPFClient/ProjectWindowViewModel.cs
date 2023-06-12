@@ -46,7 +46,6 @@ namespace Prog4Project.WPFClient
             }
         }
 
-
         public ICommand CreateProjectCommand { get; set; }
         public ICommand DeleteProjectCommand { get; set; }
         public ICommand UpdateProjectCommand { get; set; }
@@ -115,10 +114,13 @@ namespace Prog4Project.WPFClient
                 Projects = new RestCollection<Project>("http://localhost:20741/", "project");
                 CreateProjectCommand = new RelayCommand(() =>
                 {
-                    Projects.Add(new Project()
+                    if (SelectedProject != null)
                     {
-                        ProjectName = SelectedProject.ProjectName
-                    });
+                        Projects.Add(new Project()
+                        {
+                            ProjectName = SelectedProject.ProjectName
+                        });
+                    }
                 });
                 UpdateProjectCommand = new RelayCommand(() =>
                 {
