@@ -57,29 +57,11 @@ namespace Prog4Project.Logic
                 .Average(t => t.Difficulity);
         }
 
-        public IEnumerable<ManagerInfo> ManagerStat()
+        public double? GetManagerProjectNumber(int managerId)
         {
-            return from x in this.repo.ReadAll()
-                   group x by x.ManagerId into g
-                   select new ManagerInfo()
-                   {
-                       Manager = g.Key,
-                       AvgDiff = g.Average(t => t.Difficulity),
-                       ProjectNum = g.Count()
-                   };
-
+            return this.repo
+                .ReadAll()
+                .Count(t => t.ManagerId == managerId);
         }
-
-        public class ManagerInfo
-        {
-            public int Manager { get; set; }
-            public double? AvgDiff { get; set; }
-
-            public int ProjectNum { get; set; }
-            public int PosNum { get; set; }
-
-        }
-
-
     }
 }

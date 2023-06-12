@@ -8,10 +8,10 @@ namespace Prog4Project.Logic
     {
         void Create(Project item);
         void Delete(int id);
-        double? GetAvarageDifficulityPerManager(int year);
+        double? GetAvarageDifficulityPerManager(int managerId);
         Project Read(int id);
         IQueryable<Project> ReadAll();
         void Update(Project item);
-        IEnumerable<ProjectLogic.ManagerInfo> ManagerStat();
+        double? GetManagerProjectNumber(int managerId);
     }
 }

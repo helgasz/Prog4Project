@@ -3,12 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Prog4Project.WPFClient"
+          xmlns:local="clr-namespace:Prog4Project.WPFClient"
         mc:Ignorable="d"
         Title="ProjectEditorWindow" Height="450" Width="800">
     <Window.DataContext>
         <local:ProjectWindowViewModel />
     </Window.DataContext>
+   
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -27,6 +28,16 @@
             <Button Content="Create Project" Command="{Binding CreateProjectCommand}" Margin="5" Padding="3"/>
             <Button Content="Delete Project" Command="{Binding DeleteProjectCommand}" Margin="5" Padding="3"/>
             <Button Content="Update Project" Command="{Binding UpdateProjectCommand}" Margin="5" Padding="3"/>
+            <Label Content="Manager Avarage Diffulity" Background="LavenderBlush" Margin="5" Padding="3"/>
+            <TextBox x:Name="ManagerIDGiven" Margin="5" Padding="3" Text="{Binding ManagerIdGiven}"/>
+            <Button Command="{Binding AvarageDiffMGT}" Content="Manager Information" Margin="5" Padding="3"/>
+            <Label Content="Avarage:" Background="LavenderBlush" Margin="5" Padding="3"/>
+            <TextBlock Text="{Binding ManagerDifficultyAverage}" Margin="5" Padding="3" Background="Honeydew"/>
+            <Label Content="Manager Project Count:" Background="LavenderBlush" Margin="5" Padding="3"/>
+            <TextBlock Text="{Binding ManagerProjectCount}" Margin="5" Padding="3" Background="Honeydew"/>
+            
         </StackPanel>
+
+
     </Grid>
 </Window>
