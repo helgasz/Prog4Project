@@ -48,7 +48,7 @@ namespace Prog4Project.WPFClient
         public ICommand CreatePositionCommand { get; set; }
 
         public ICommand DeletePositionCommand { get; set; }
-        public ICommand UpdatePostionCommand { get; set; }
+        public ICommand UpdatePositionCommand { get; set; }
 
         public static bool IsInDesignMode
         {
@@ -72,7 +72,7 @@ namespace Prog4Project.WPFClient
                     });
                 });
 
-                UpdatePostionCommand = new RelayCommand(() =>
+                UpdatePositionCommand = new RelayCommand(() =>
                 {
                     try
                     {

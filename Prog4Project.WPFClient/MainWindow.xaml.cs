@@ -40,8 +40,8 @@ namespace Prog4Project.WPFClient
 
         private void PositionEditor(object sender, RoutedEventArgs e)
         {
-            PostionEditorWindow pos = new PostionEditorWindow();
-            pos.Show();
+            PostionEditorWindow positioneditorial = new PostionEditorWindow();
+            positioneditorial.Show();
         }
 
         private void ProjectEditor(object sender, RoutedEventArgs e)
